@@ -41,7 +41,8 @@
 }
 
 .navigationLink:hover,
-.navigationLink:focus-visible {
+.navigationLink:focus-visible,
+.active {
   color: var(--color-light-blue);
   text-decoration: underline;
 }

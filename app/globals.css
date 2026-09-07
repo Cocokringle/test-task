@@ -10,7 +10,7 @@
   --color-error: #ec383b;
   --color-error-light: #ffdfdf;
 
-  --font-family: var(--font-manrope), system-ui, sans-serif;
+  --font-family: var(--font-manrope, "Manrope"), system-ui, sans-serif;
   --font-size-h1: 60px;
   --font-size-h2: 24px;
   --font-size-h3: 20px;
@@ -30,6 +30,7 @@
 
 body {
   margin: 0;
+  font-family: var(--font-family);
 }
 
 h1,

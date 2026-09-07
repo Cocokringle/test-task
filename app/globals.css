@@ -11,10 +11,12 @@
   --color-error-light: #ffdfdf;
 
   --font-family: var(--font-manrope), system-ui, sans-serif;
+  --font-size-h1: 60px;
   --font-size-h2: 24px;
-  --line-height-h2: 32px;
   --font-size-h3: 20px;
-  --line-height-h3: 24px;
+  --line-height-h1: 1.2;
+  --line-height-h2: 1.33;
+  --line-height-h3: 1.25;
   --font-weight-heading: 600;
 
   color: var(--color-main);
@@ -30,12 +32,18 @@ body {
   margin: 0;
 }
 
+h1,
 h2,
 h3 {
   margin: 0;
   font-family: var(--font-family);
   font-weight: var(--font-weight-heading);
   letter-spacing: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 
 h2 {

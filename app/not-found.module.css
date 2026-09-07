@@ -1,0 +1,12 @@
+.container {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.title {
+  color: var(--text-h);
+}
+
+.description {
+  color: var(--text);
+}

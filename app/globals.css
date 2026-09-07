@@ -1,0 +1,60 @@
+:root {
+  --color-main: #101828;
+  --color-badges: #f2f4f7;
+  --color-inputs: #f7f7f7;
+  --color-white: #ffffff;
+  --color-light-blue: #00aad4;
+  --color-dark-blue: #0095ba;
+  --color-gray-light: #dadde1;
+  --color-gray: #8d929a;
+  --color-error: #ec383b;
+  --color-error-light: #ffdfdf;
+
+  --font-family: var(--font-manrope), system-ui, sans-serif;
+  --font-size-h2: 24px;
+  --line-height-h2: 32px;
+  --font-size-h3: 20px;
+  --line-height-h3: 24px;
+  --font-weight-heading: 600;
+
+  color: var(--color-main);
+  background: var(--color-white);
+  font-family: var(--font-family);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+p {
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  color: var(--color-main);
+  background: var(--color-white);
+}

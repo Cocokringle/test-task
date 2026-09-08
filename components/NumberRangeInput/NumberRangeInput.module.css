@@ -1,0 +1,71 @@
+.range {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--color-main);
+  font-family: var(--font-family);
+}
+
+.label {
+  width: 100%;
+  padding: 0;
+  color: var(--color-gray);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: 44px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--color-white);
+}
+
+.control {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  color: var(--color-main);
+  background-color: transparent;
+  font: 500 16px/20px var(--font-family);
+  appearance: textfield;
+}
+
+.control:first-child {
+  border-right: 1px solid var(--color-gray-light);
+}
+
+.control::placeholder {
+  color: var(--color-main);
+  opacity: 1;
+}
+
+.control::-webkit-inner-spin-button,
+.control::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.control:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--color-light-blue);
+}
+
+.control:disabled {
+  color: var(--color-gray);
+  cursor: not-allowed;
+}
+
+.control:disabled::placeholder {
+  color: var(--color-gray);
+}

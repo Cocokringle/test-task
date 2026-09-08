@@ -3,7 +3,6 @@ import css from './not-found.module.css'
 
 const title = 'Page not found'
 const description = 'The requested page does not exist.'
-const url = ''
 
 export const metadata: Metadata = {
   title,
@@ -11,8 +10,6 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url,
-    images: [''],
   },
 }
 

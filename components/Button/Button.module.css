@@ -43,6 +43,28 @@
   border-color: var(--color-dark-blue);
 }
 
+.link {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--color-gray);
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.link:not(:disabled):hover,
+.link:not(:disabled):focus-visible {
+  color: var(--color-main);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:disabled {
+  opacity: 0.7;
+}
+
 .button:disabled {
   cursor: not-allowed;
 }

@@ -1,0 +1,85 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.fields {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.brand {
+  width: 204px;
+}
+
+.price {
+  width: 196px;
+}
+
+.mileage {
+  width: 320px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-top: 24px;
+}
+
+.validation {
+  max-width: 880px;
+  margin: -16px auto 28px;
+  color: var(--color-error);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 1247px) {
+  .filters,
+  .fields {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 920px) {
+  .filters {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .brand,
+  .price,
+  .mileage {
+    width: 100%;
+  }
+
+  .mileage {
+    grid-column: 1 / -1;
+  }
+
+  .actions {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .mileage {
+    grid-column: auto;
+  }
+}

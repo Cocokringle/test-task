@@ -1,0 +1,81 @@
+.backdrop {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: clamp(32px, calc(100svh - 590px), 465px) 24px 48px;
+  background-color: rgb(245 245 245 / 89%);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  box-sizing: border-box;
+  width: min(100%, 543px);
+  min-height: 294px;
+  padding: 48px 96px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.spinner {
+  width: 72px;
+  height: 72px;
+  box-sizing: border-box;
+  border: 5px solid #f2f4f7;
+  border-top-color: var(--color-light-blue);
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+}
+
+.content {
+  color: var(--color-black);
+  text-align: center;
+}
+
+.title,
+.description {
+  margin: 0;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .backdrop {
+    padding: 40px 16px 32px;
+  }
+
+  .panel {
+    min-height: 250px;
+    padding: 40px 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 1.8s;
+  }
+}

@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes } from 'react'
 import css from './Button.module.css'
 
-export type ButtonVariant = 'primary' | 'outline'
+export type ButtonVariant = 'primary' | 'outline' | 'link'
 export type ButtonSize = 'medium' | 'large'
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {

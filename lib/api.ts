@@ -9,7 +9,7 @@ import type {
 } from '../types/cars'
 
 const client = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL || '',
 })
 
 export const fetchCars = async (params: FetchCarsParams = {}): Promise<FetchCarsResponse> => {

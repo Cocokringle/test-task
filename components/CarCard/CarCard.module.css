@@ -1,0 +1,122 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 276px;
+  padding: 16px;
+  gap: 24px;
+  border-radius: 16px;
+  background-color: var(--color-white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 268px;
+  overflow: hidden;
+  border-radius: 14px;
+  background-color: var(--color-badges);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 23, 0.5) 2.5%,
+    rgba(18, 20, 23, 0) 41.07%
+  );
+  pointer-events: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.name {
+  min-width: 0;
+  overflow: hidden;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model {
+  color: var(--color-light-blue);
+}
+
+.price {
+  flex-shrink: 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  gap: 4px;
+  border-radius: 8px;
+  background-color: var(--color-inputs);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  height: 16px;
+  gap: 6px;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.divider {
+  align-self: stretch;
+  flex: 0 0 1px;
+  width: 1px;
+  background-color: var(--color-gray-light);
+}
+
+.company,
+.carType {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.readMoreLink {
+  flex-shrink: 0;
+  text-decoration: none;
+}

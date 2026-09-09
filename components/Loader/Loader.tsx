@@ -1,5 +1,11 @@
 import css from './Loader.module.css'
 
-export default function Loader() {
-  return <p className={css.text}>Loading cars, please wait...</p>
+type LoaderProps = {
+  text?: string
 }
+
+const Loader = ({ text = 'Loading cars, please wait...' }: LoaderProps) => {
+  return <p className={css.text}>{text}</p>
+}
+
+export default Loader

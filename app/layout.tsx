@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import './globals.css'
+import 'react-toastify/dist/ReactToastify.css'
 import { Header } from '~/components/Header/Header'
 import TanStackProvider from '~/components/TanStackProvider/TanStackProvider'
+import { ToastProvider } from '~/components/ToastProvider/ToastProvider'
 
 const manrope = Manrope({
   weight: ['400', '500', '600', '700'],
@@ -34,6 +36,7 @@ export default function RootLayout({
         <TanStackProvider>
           <Header />
           {children}
+          <ToastProvider />
         </TanStackProvider>
       </body>
     </html>

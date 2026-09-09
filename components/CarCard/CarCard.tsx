@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { formatMileage } from '~/lib/utils'
 import type { Car } from '~/types/cars'
 import buttonCss from '../Button/Button.module.css'
 import css from './CarCard.module.css'
@@ -8,9 +9,6 @@ export interface CarCardProps {
   car: Car
   priority?: boolean
 }
-
-const formatMileage = (mileage: number): string =>
-  new Intl.NumberFormat('uk-UA').format(mileage)
 
 export const CarCard = ({ car, priority = false }: CarCardProps) => {
   const { brand, img, location, mileage, model, rentalCompany, rentalPrice, type, year } = car

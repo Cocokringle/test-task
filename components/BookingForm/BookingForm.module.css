@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px;
+  gap: 24px;
+  border-radius: 16px;
+  background-color: var(--color-white);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.description {
+  color: var(--color-gray);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.form,
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  gap: 24px;
+}
+
+.fields {
+  gap: 16px;
+}
+
+.submit {
+  width: 100%;
+}
+
+.submit:disabled {
+  opacity: 0.65;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px;
+  }
+}

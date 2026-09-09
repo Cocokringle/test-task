@@ -1,0 +1,14 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+}

@@ -12,11 +12,9 @@ import { NoCarsFound } from '~/components/NoCarsFound/NoCarsFound'
 import { fetchCars, fetchCarsFilters } from '~/lib/api'
 import { createCatalogSearchParams } from '~/lib/catalogFilters'
 import { PER_PAGE } from '~/lib/constants'
+import { getErrorMessage } from '~/lib/utils'
 import type { FetchCarsParams } from '~/types/cars'
 import css from './Catalog.module.css'
-
-const getErrorMessage = (error: unknown) =>
-  error instanceof Error ? error.message : 'Please try again later.'
 
 type CatalogProps = {
   initialFilters: FetchCarsParams

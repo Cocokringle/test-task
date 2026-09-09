@@ -53,12 +53,8 @@
   line-height: 1.333;
 }
 
-.hero .catalogButton {
+.hero .catalogLink {
   width: 276px;
-}
-
-.catalogLink {
-  line-height: 0;
   text-decoration: none;
 }
 

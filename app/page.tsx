@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '~/components/Button/Button'
+import buttonCss from '~/components/Button/Button.module.css'
 import css from './page.module.css'
 
 export default function Home() {
@@ -25,10 +25,11 @@ export default function Home() {
             <p className={css.subtitle}>Reliable and budget-friendly rentals for any journey</p>
           </div>
 
-          <Link className={css.catalogLink} href='/catalog'>
-            <Button className={css.catalogButton} size='large'>
-              View Catalog
-            </Button>
+          <Link
+            className={`${buttonCss.button} ${buttonCss.primary} ${buttonCss.large} ${css.catalogLink}`}
+            href='/catalog'
+          >
+            View Catalog
           </Link>
         </div>
       </section>

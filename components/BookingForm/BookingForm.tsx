@@ -1,11 +1,11 @@
 'use client'
 
-import axios from 'axios'
 import { useMutation } from '@tanstack/react-query'
 import { Form, Formik, type FormikHelpers } from 'formik'
 import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 import { createBookingRequest } from '~/lib/api'
+import { getErrorMessage } from '~/lib/utils'
 import type { CreateBookingRequest } from '~/types/cars'
 import { Button } from '../Button/Button'
 import { Textarea } from '../Textarea/Textarea'
@@ -40,14 +40,6 @@ const bookingSchema = Yup.object({
     .optional(),
 })
 
-const getSubmitError = (error: unknown) => {
-  if (axios.isAxiosError<{ message?: string }>(error)) {
-    return error.response?.data?.message ?? error.message
-  }
-
-  return error instanceof Error ? error.message : 'Could not send your request.'
-}
-
 export const BookingForm = ({ carId }: BookingFormProps) => {
   const bookingMutation = useMutation({
     mutationFn: (bookingRequest: CreateBookingRequest) =>
@@ -56,7 +48,7 @@ export const BookingForm = ({ carId }: BookingFormProps) => {
       toast.success(response.message)
     },
     onError: error => {
-      toast.error(getSubmitError(error))
+      toast.error(getErrorMessage(error))
     },
   })
 

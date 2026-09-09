@@ -18,10 +18,9 @@ export const CarDetailsPage = ({ carId }: CarDetailsPageProps) => {
     queryKey: ['car', carId],
     queryFn: () => fetchCarById(carId),
     staleTime: 1000 * 60,
-    throwOnError: true,
   })
 
-  if (carQuery.isPending || carQuery.isLoading) {
+  if (carQuery.isPending) {
     return (
       <main className={css.main}>
         <div className={css.feedback}>

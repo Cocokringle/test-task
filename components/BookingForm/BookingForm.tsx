@@ -24,6 +24,8 @@ const initialValues: BookingFormValues = {
   comment: '',
 }
 
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+
 const bookingSchema = Yup.object({
   name: Yup.string()
     .trim()
@@ -33,6 +35,10 @@ const bookingSchema = Yup.object({
   email: Yup.string()
     .trim()
     .email('Please enter a valid email.')
+    .matches(emailPattern, {
+      message: 'Please enter a valid email.',
+      excludeEmptyString: true,
+    })
     .required('Email is required.'),
   comment: Yup.string()
     .trim()
